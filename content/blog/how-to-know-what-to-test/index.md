@@ -43,10 +43,7 @@ implementation details
 Thinking about use cases though gets us closer to writing tests the way the user
 uses the application:
 
-> The more your tests resemble the way your software is used, the more
-> confidence they can give you. <span style={{paddingTop: 10, float: 'right'}}>–
-> <a href="https://twitter.com/kentcdodds/status/977018512689455106" target="_blank" rel="noopener noreferrer">me,
-> on twitter</a></span>
+https://twitter.com/kentcdodds/status/977018512689455106
 
 ## Code Coverage < Use Case Coverage
 
@@ -231,15 +228,15 @@ would be useful to test:
 
 - User interactions (using
   [`fireEvent`](https://testing-library.com/docs/dom-testing-library/api-events)
-  from react-testing-library): Is the end user able to interact with the
+  from React Testing Library): Is the end user able to interact with the
   elements that the component renders?
 - Changing props (using
   [`rerender`](https://testing-library.com/docs/react-testing-library/api#rerender)
-  from react-testing-library): What happens when the developer user re-renders
+  from React Testing Library): What happens when the developer user re-renders
   your component with new props?
 - Context changes (using
   [`rerender`](https://testing-library.com/docs/react-testing-library/api#rerender)
-  from react-testing-library): What happens when the developer user changes
+  from React Testing Library): What happens when the developer user changes
   context resulting in your component re-rendering?
 - Subscription changes: What happens when an event emitter the component
   subscribes to changes? (Like firebase, a redux store, a router, a media query,
@@ -287,7 +284,7 @@ time.
 > For more on establishing a culture of testing and reasonable code coverage
 > targets, I suggest watching [Aaron Abramov's](https://twitter.com/aarondjents)
 > talk at [AssertJS 2018](https://2018.assertjs.com):
-> [Establishing testing patterns with software design principles](https://youtu.be/_pnW-JjmyXE&list=PLZ66c9_z3umNSrKSb5cmpxdXZcIPNvKGw)
+> [Establishing testing patterns with software design principles](https://youtu.be/_pnW-JjmyXE?list=PLZ66c9_z3umNSrKSb5cmpxdXZcIPNvKGw)
 
 <!-- force a break between these comments... -->
 

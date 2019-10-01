@@ -336,7 +336,7 @@ the `setup` function here. Here's a simple example:
 
 ```jsx
 import React from 'react'
-import {render, fireEvent} from 'react-testing-library'
+import {render, fireEvent} from '@testing-library/react'
 import LoginForm from '../login-form'
 
 function renderLoginForm(props) {
@@ -374,6 +374,11 @@ test('submit calls the submit handler', () => {
 > three tests in the file that is using it and those tests are short. But if
 > you've got some nuance you're testing (like error states for example), then
 > this kind of abstraction is great.
+
+## Nesting
+
+I'd recommend you give [Avoid Nesting in Tests](/blog/avoid-nesting-in-tests) a
+read.
 
 ## jest-in-case and test.each
 

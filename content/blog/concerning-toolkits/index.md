@@ -30,7 +30,7 @@ medium to build a case for your opinion, I've decided to write out my thoughts
 and justifications for "zero config" tools. Instead of "zero config" though,
 we're going to refer to these as "toolkits" 🛠 📦 as coined in
 [Dan Abramov](https://twitter.com/dan_abramov)'s
-[talk](https://youtu.be/G39lKaONAlA&list=PLBnKlKpPeagkaVtpmZNK6XiWw8yNZmCxL).
+[talk](https://youtu.be/G39lKaONAlA?list=PLBnKlKpPeagkaVtpmZNK6XiWw8yNZmCxL).
 
 ### So what's a toolkit? 🛠 📦
 
@@ -282,7 +282,7 @@ rules).
 I realize this newsletter is a little bit more ranty than normal. I hope that
 it's helpful though. I'd like to finish with a quote from
 [Dan Abramov](https://twitter.com/dan_abramov)'s talk
-["The Melting Pot of JavaScript" at Zeit Day](https://youtu.be/G39lKaONAlA&list=PLBnKlKpPeagkaVtpmZNK6XiWw8yNZmCxL):
+["The Melting Pot of JavaScript" at Zeit Day](https://youtu.be/G39lKaONAlA?list=PLBnKlKpPeagkaVtpmZNK6XiWw8yNZmCxL):
 
 > _I've heard from several people that they've consolidated their companies tool
 > dependencies into a single package and this worked really well for them. I
@@ -291,16 +291,3 @@ it's helpful though. I'd like to finish with a quote from
 Give it a try and maybe you'll find that it's not horrible. I know I've been
 loving `kcd-scripts` on my projects and I'm looking forward to getting more
 adopters of `paypal-scripts` at PayPal 😀 Good luck! 👍
-
-**Things to not miss**:
-
-- [`babel-plugin-macros`](https://github.com/facebook/create-react-app/pull/3675)
-  [merged into](https://github.com/facebook/create-react-app/pull/3675)
-  [`create-react-app`](https://github.com/facebook/create-react-app/pull/3675)!!!
-  CRA v2 will be released soon I think 😀
-- Read
-  [Zero Config with babel-plugin-macros](https://babeljs.io/blog/2017/09/11/zero-config-with-babel-macros)
-  to learn more about why getting it in CRA is so awesome.
-- [Tweet from Dan](https://twitter.com/dan_abramov/status/952510006548627461)
-  saying "let's stop creating "boilerplates" and instead make reusable versioned
-  toolkits."

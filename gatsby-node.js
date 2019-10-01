@@ -1,3 +1,4 @@
+/* eslint-disable max-statements */
 const path = require('path')
 const slugify = require('@sindresorhus/slugify')
 const {createFilePath} = require('gatsby-source-filesystem')
@@ -93,6 +94,38 @@ function createBlogPages({blogPath, data, paginationTemplate, actions}) {
   return null
 }
 
+const createEpisodes = (createPage, edges) => {
+  edges.forEach(({node}) => {
+    const seasonNumber = node.frontmatter.season
+    const twoDigits = n => (n.toString().length < 2 ? `0${n}` : n)
+    const episodePath = `chats-with-kent-podcast/seasons/${twoDigits(
+      seasonNumber,
+    )}/episodes/${node.frontmatter.slug}`
+
+    createPage({
+      path: episodePath,
+      component: path.resolve(`./src/templates/podcast-episode.js`),
+      context: {
+        slug: episodePath,
+        id: node.frontmatter.id,
+        title: node.frontmatter.title,
+        season: node.frontmatter.season,
+      },
+    })
+  })
+}
+
+function createPodcastPages({data, actions}) {
+  if (_.isEmpty(data.edges)) {
+    throw new Error('There are no podcast episodes!')
+  }
+  const {edges} = data
+  const {createPage} = actions
+
+  createEpisodes(createPage, edges)
+  return null
+}
+
 exports.createPages = async ({actions, graphql}) => {
   const {data, errors} = await graphql(`
     fragment PostDetails on Mdx {
@@ -112,11 +145,24 @@ exports.createPages = async ({actions, graphql}) => {
         date
         redirects
       }
-      code {
-        scope
-      }
     }
     query {
+      podcast: allMdx(
+        filter: {fileAbsolutePath: {regex: "//content/podcast//"}}
+      ) {
+        edges {
+          node {
+            fileAbsolutePath
+            frontmatter {
+              title
+              slug
+              id
+              season
+              number
+            }
+          }
+        }
+      }
       blog: allMdx(
         filter: {
           frontmatter: {published: {ne: false}}
@@ -163,7 +209,13 @@ exports.createPages = async ({actions, graphql}) => {
     return Promise.reject(errors)
   }
 
-  const {blog, writing, workshops} = data
+  const {blog, writing, workshops, podcast} = data
+
+  createPodcastPages({
+    podcastPath: '',
+    data: podcast,
+    actions,
+  })
 
   createBlogPages({
     blogPath: '/blog',
@@ -241,10 +293,18 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     let slug =
       node.frontmatter.slug ||
       createFilePath({node, getNode, basePath: `pages`})
-    let {isWriting, isWorkshop, isScheduled} = false
+    let {isWriting, isWorkshop, isScheduled, isPodcast} = false
 
     if (node.fileAbsolutePath.includes('content/blog/')) {
       slug = `/blog/${node.frontmatter.slug || slugify(parent.name)}`
+    }
+
+    if (node.fileAbsolutePath.includes('content/podcast/')) {
+      const twoDigits = n => (n.toString().length < 2 ? `0${n}` : n)
+      slug = `chats-with-kent-podcast/seasons/${twoDigits(
+        node.frontmatter.season,
+      )}/episodes/${node.frontmatter.slug}`
+      isPodcast = true
     }
 
     if (node.fileAbsolutePath.includes('content/workshops/')) {
@@ -372,6 +432,12 @@ exports.onCreateNode = ({node, getNode, actions}) => {
       name: 'isScheduled',
       node,
       value: isScheduled,
+    })
+
+    createNodeField({
+      name: 'isPodcast',
+      node,
+      value: isPodcast,
     })
   }
 }

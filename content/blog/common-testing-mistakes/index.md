@@ -42,7 +42,7 @@ export class Counter extends React.Component {
 
 // __tests__/counter.js
 import React from 'react'
-// (it's hard to test implementation details with react-testing-library,
+// (it's hard to test implementation details with React Testing Library,
 //  so we'll use enzyme in this example 😅)
 import {mount} from 'enzyme'
 import {Counter} from '../counter'
@@ -111,7 +111,7 @@ tests are not.
 > due to the fact that they're shared in multiple projects._
 
 I talked a bit about this in
-[my livestream](https://youtu.be/O2tsvUJT09U&index=9&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u&t=0s)
+[my livestream](https://youtu.be/O2tsvUJT09U?index=9&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u&t=0s)
 the other day, check it out!
 
 ### Mistake Number 3: Repeat Testing

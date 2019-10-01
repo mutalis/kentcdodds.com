@@ -22,7 +22,7 @@ figure out how to test React components. I tried
 immediately decided that I would never use it to test my React components. I've
 expressed this feeling on many occasions and get asked on a regular basis why I
 feel the way I do about `shallow` rendering and why
-[`react-testing-library`](https://github.com/testing-library/react-testing-library)
+[React Testing Library](https://github.com/testing-library/react-testing-library)
 will never support `shallow` rendering.
 
 So finally I'm coming out with it and explaining why I never use shallow
@@ -246,7 +246,7 @@ my mind and is evidence to me that we're testing implementation details.
 
 In addition, you can _definitely_ unit test react components without shallow
 rendering. Checkout the section near the end for an example of such a test (uses
-react-testing-library, but you could do this with enzyme as well) that uses Jest
+React Testing Library, but you could do this with enzyme as well) that uses Jest
 mocking to mock out the `<CSSTransition />` component.
 
 I should add that I generally am against mocking even third party components
@@ -271,15 +271,15 @@ mocks.
 ### Without shallow rendering
 
 I'm a huge believer of the guiding principle of
-[`react-testing-library`](https://github.com/testing-library/react-testing-library):
+[React Testing Library](https://github.com/testing-library/react-testing-library):
 
-> [_The more your tests resemble the way your software is used, the more confidence they can give you._](https://twitter.com/kentcdodds/status/977018512689455106)_ — Kent
-> C. Dodds 👋_
+> _[The more your tests resemble the way your software is used, the more confidence they can give you.](https://twitter.com/kentcdodds/status/977018512689455106)
+>  — Kent C. Dodds 👋_
 
 That's why I wrote the library in the first place. As a side-note to this
 shallow rendering post, I want to mention there are fewer ways for you to do
 things that are impossible for the user to do. Here's the list of things that
-react-testing-library cannot do (out of the box):
+React Testing Library cannot do (out of the box):
 
 1.  shallow rendering
 2.  Static rendering (like enzyme's
@@ -288,7 +288,7 @@ react-testing-library cannot do (out of the box):
     [`find`](http://airbnb.io/enzyme/docs/api/ReactWrapper/find.html)) which
     include the ability to find by a component class or even its `displayName`
     (again, the user does not care what your component is called and neither
-    should your test). Note: react-testing-library supports querying for
+    should your test). Note: React Testing Library supports querying for
     elements in ways that encourage accessibility in your components and more
     maintainable tests.
 4.  Getting a component instance (like enzyme's
@@ -303,10 +303,9 @@ closely. In addition, it can verify that you're using `<CSSTransition />`
 properly (something the shallow rendering example was _incapable_ of doing).
 
 ```jsx
-import 'react-testing-library/cleanup-after-each'
 import React from 'react'
 import {CSSTransition} from 'react-transition-group'
-import {render, fireEvent} from 'react-testing-library'
+import {render, fireEvent} from '@testing-library/react'
 import {HiddenMessage} from '../hidden-message'
 
 // NOTE: you do NOT have to do this in every test.
@@ -320,7 +319,7 @@ jest.mock('react-transition-group', () => {
 
 test('you can mock things with jest.mock', () => {
   const {getByText, queryByText} = render(<HiddenMessage initialShow={true} />)
-  const toggleButton = getByText('Toggle')
+  const toggleButton = getByText(/toggle/i)
 
   const context = expect.any(Object)
   const children = expect.any(Object)
@@ -330,13 +329,13 @@ test('you can mock things with jest.mock', () => {
     {in: true, ...defaultProps},
     context,
   )
-  expect(getByText('Hello world')).not.toBeNull()
+  expect(getByText(/hello world/i)).not.toBeNull()
 
   CSSTransition.mockClear()
 
   fireEvent.click(toggleButton)
 
-  expect(queryByText('Hello world')).toBeNull()
+  expect(queryByText(/hello world/i)).toBeNull()
   expect(CSSTransition).toHaveBeenCalledWith(
     {in: false, ...defaultProps},
     context,
@@ -348,7 +347,7 @@ test('you can mock things with jest.mock', () => {
 
 A few weeks ago, my [DevTipsWithKent](http://kcd.im/devtips) (my weekdaily
 livestream on [YouTube](http://kcd.im/youtube)) I livestreamed
-"[Migrating from shallow rendering react components to explicit component mocks](https://youtu.be/LHUdxkThTM0&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)".
+"[Migrating from shallow rendering react components to explicit component mocks](https://youtu.be/LHUdxkThTM0?list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)".
 In that I demonstrate some of the pitfalls of shallow rendering I describe above
 as well as how to use jest mocking instead.
 
@@ -380,24 +379,3 @@ checkout another blog post:
 [**Effective Snapshot Testing**](/blog/effective-snapshot-testing)
 
 I hope that helps!
-
-**Learn more about testing from me**:
-
-- [Frontend Masters](https://frontendmasters.com):
-  [Testing Practices and Principles](https://frontendmasters.com/workshops/testing-practices-principles)
-  &
-  [Testing React Applications](https://frontendmasters.com/courses/testing-react)
-- [Confidently Ship Production React Apps](https://egghead.io/lessons/react-confidently-ship-production-react-apps) — Something
-  new on [egghead.io](http://egghead.io). It's a recording of one of my talks
-  especially for [egghead.io](http://egghead.io). I think you'll really enjoy it
-  (and it's 🆓)
-- [Write tests. Not too many. Mostly integration.](https://youtu.be/Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — My
-  talk at Assert.js conference
-  ([and here's the blog post](http://kcd.im/write-tests))
-- [Testing Practices and Principles](https://youtu.be/VQZx1Z3sW0E&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
-  recording of my workshop at Assert.js
-
-**Things to not miss**:
-
-- [Avoid setState warnings on unmounted React components](https://youtu.be/8BNdxFzMeVg&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
-- [Magic Move effect with JavaScript](https://youtu.be/3AaghqS3W4Y&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)

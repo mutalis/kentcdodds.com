@@ -12,4 +12,5 @@ module.exports = {
     __PATH_PREFIX__: ``,
   },
   testURL: `http://localhost`,
+  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
 }

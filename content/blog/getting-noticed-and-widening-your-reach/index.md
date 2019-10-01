@@ -23,7 +23,7 @@ it becomes popular by virtue of you being so popular. If I create something, it
 goes unnoticed even if it's better than what you created."
 
 While this may be true, the attitude bothers me. I'd be classified in the
-"popular" crowed, so maybe that's why it bothers me, but it also bothers me
+"popular" crowd, so maybe that's why it bothers me, but it also bothers me
 because it feels like
 ["pride from the bottom looking up"](https://www.lds.org/general-conference/1989/04/beware-of-pride)
 or could also come from
@@ -190,36 +190,36 @@ I had met Marc at my first MidwestJS where we were both speakers and thought he
 was a pretty cool dude. I knew of Frontend Masters and had a great deal of
 respect for Marc and his company. So I reached out to him:
 
-> _Hey dude,  
+> Hey dude,  
 > I'm listening to your JSJabber episode and I've been wanting to do a FEM
 > workshop for a long time. I've been trying to think about what I could
 > contribute and something that I'm really into is open source. I have a growing
-> list of open source libraries_ [_on npm_](https://www.npmjs.com/~kentcdodds) >
-> _and_ [_GitHub_](https://github.com/kentcdodds) _and I'm the owner and
-> maintainer of_ >
-> [_angular-formly_](https://github.com/formly-js/angular-formly) > _which has
-> grown in popularity._
-
-> _I also have an_ >
-> [_egghead.io series_](https://egghead.io/series/how-to-write-an-open-source-javascript-library) >
-> _on the subject. But, as you know, a workshop format would make it pretty
-> useful._
-
-> _I think that we could get more people into open source if they just knew how
+> list of open source libraries [on npm](https://www.npmjs.com/~kentcdodds) and
+> [GitHub](https://github.com/kentcdodds) and I'm the owner and maintainer of
+> [angular-formly](https://github.com/formly-js/angular-formly) which has grown
+> in popularity.
+>
+> I also have an
+> [egghead.io series](https://egghead.io/series/how-to-write-an-open-source-javascript-library)
+> on the subject. But, as you know, a workshop format would make it pretty
+> useful.
+>
+> I think that we could get more people into open source if they just knew how
 > to get started. I believe you're interested in open source as well with your
 > jQuery UI Datepicker experience. I think you could be pretty jazzed about this
 > workshop.  
-> What do I need to do to make this happen?_
+> What do I need to do to make this happen?
 
-> _Thanks!  
-> Kent_
+> Thanks!
+>
+> Kent
 
 To which Marc responded:
 
-> _Sounds awesome! When were you thinking?_
+> Sounds awesome! When were you thinking?
 
 And so began my relationship with Frontend Masters. I now have
-[six courses (almost 7) on Frontend Masters](https://frontendmasters.com/teachers/kentcdodds).
+[five courses on Frontend Masters](https://frontendmasters.com/teachers/kentcdodds).
 **The takeaway here** is courage. I'm mostly sharing my success stories in this
 blog post, but you gotta know that there were plenty of rejections as well. But
 it's ok! Have the courage to ask.
@@ -266,10 +266,10 @@ The show did prove to take more time than I had, so I did eventually
 [Sunset JavaScript Air](/blog/sunsetting-javascript-air). But maybe one day I'll
 start it back up again. It was awesome.
 
-> _I'll just add here really quick that I'm also way more likely to be able to
+> I'll just add here really quick that I'm also way more likely to be able to
 > give you an hour of my time if I know that the value we create will be spread
-> to impact more people. I'm always happy to join you on a podcast._ >
-> [_Here's a list of podcasts I've been a guest on in the past_](/appearances)_._
+> to impact more people. I'm always happy to join you on a podcast.
+> [Here's a list of podcasts I've been a guest on in the past](/appearances).
 
 ### [Newslettering](http://kcd.im/news) & [Blogging](/blog)
 
@@ -343,10 +343,10 @@ do get to everything eventually in one form or another.
 We all need to acknowledge something very important: Privilege. If you've not
 heard Kyle Simpson talk about
 [#PrivilegeAwareness](https://twitter.com/search?q=%23privilegeawareness&src=typd),
-give the first part of [this talk](https://youtu.be/wJEX2FgNYLg&t=46s) a quick
+give the first part of [this talk](https://youtu.be/wJEX2FgNYLg?t=46s) a quick
 watch. I have similar privileges that Kyle mentions. Incidentally, a few hours
 after Kyle gave his talk,
-[I gave a talk](https://youtu.be/-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&t=2m33s)
+[I gave a talk](https://youtu.be/-qPh6I2hfjw?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&t=2m33s)
 at the same conference where I talk about my privilege as an important thing to
 acknowledge.
 
@@ -371,24 +371,3 @@ hard to produce useful content for people who in turn follow me because they
 want more of that value which we all create and I capture and disseminate. You
 can do this too. Don't despair. Keep working at it. Be happy with where you are
 and the direction you're going. You can do it! Good luck!
-
-**Learn more about career development from me**:
-
-- [Zero to 60 in Software Development: How to Jumpstart Your Career — Forward 4 Web Summit](https://youtu.be/-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-
-**Things to not miss**:
-
-- [Testing React with Kent C. Dodds and Jack Franklin](https://youtu.be/z4DNlVlOfjU&list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr) — A
-  [tech chat](https://github.com/kentcdodds/ama/issues/125) with myself and
-  [Jack Franklin](https://twitter.com/jack_franklin) talking about testing
-  React. We cover a lot of subjects that you may find interesting!
-- [React Fire 🔥🔥🔥](https://github.com/facebook/react/issues/13525) — An
-  initiative to modernize react-dom
-- [Using the React DevTools Profiler to Diagnose React App Performance Issues](https://www.netlify.com/blog/2018/08/29/using-the-react-devtools-profiler-to-diagnose-react-app-performance-issues)-
-  A great blog post by [Shawn Wang](https://twitter.com/swyx) about an awesome
-  new feature in the React DevTools!
-- [ui.reach.tech](https://ui.reach.tech) — An awesome collection of highly
-  accessible React components by my friend
-  [Ryan Florence](https://twitter.com/ryanflorence) (he's also giving
-  [Advanced React trainings](https://reach.tech/workshops) all over the US
-  starting in October).

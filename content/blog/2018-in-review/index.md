@@ -25,13 +25,13 @@ mostly a secret and surprise 😃).
 > Note: I don't want to bother with trying to sort these in any particular
 > order, so... they're not in any particular order...
 
-## [react-testing-library](https://github.com/testing-library/react-testing-library)
+## [React Testing Library](https://github.com/testing-library/react-testing-library)
 
 This year I
 [created](https://github.com/testing-library/react-testing-library/commit/4f16c6e6b356fae1ad92f59eebeb1a8000f60714)
 and
-[introduced react-testing-library](/blog/introducing-the-react-testing-library).
-It has [grown a lot](https://www.npmtrends.com/react-testing-library) since
+[introduced React Testing Library](/blog/introducing-the-react-testing-library).
+It has [grown a lot](https://www.npmtrends.com/@testing-library/react) since
 then. [The spectrum community](https://spectrum.chat/testing-library) has
 [over 300 members now](https://twitter.com/kentcdodds/status/1079523389553790976).
 We've [really](https://twitter.com/Saifadin/status/1079746658882195457)
@@ -57,9 +57,9 @@ for making
 [react-native-testing-library](https://github.com/callstack/react-native-testing-library).
 
 I'm super proud of what we've accomplished here. The
-[react-testing-library all contributors table](https://github.com/testing-library/react-testing-library/blob/master/README.md#contributors)
+[React Testing Library all contributors table](https://github.com/testing-library/react-testing-library/blob/master/README.md#contributors)
 lists 63 awesome people, and the
-[dom-testing-library all contributors table](https://github.com/testing-library/dom-testing-library/blob/master/README.md#contributors)
+[DOM Testing Library all contributors table](https://github.com/testing-library/dom-testing-library/blob/master/README.md#contributors)
 lists 46 (many repeats, but not all). These people are amazing and I really
 appreciate what they've done. I don't want to leave anyone out, but I would like
 to give a special shout out to these folks: [Giorgio](https://twitter.com/Gpx),
@@ -170,7 +170,7 @@ What makes this project such a big deal is that it's very soon to be the basis
 of the default template project at PayPal we have called the "sample-app." Every
 new app started at PayPal is basically a fork of this "sample-app." So because
 of the work that I and others have done, every new app at PayPal will be written
-in TypeScript, use Jest, React, react-testing-library, emotion, webpack, babel,
+in TypeScript, use Jest, React, React Testing Library, emotion, webpack, babel,
 prettier, and eslint. And what makes it better is those apps wont have to worry
 about keeping those tools up to date saving dozens of developer hours a year PER
 PROJECT. I'm really proud of this accomplishment.
@@ -208,7 +208,7 @@ Anyway, really happy with how that turned out :)
 
 ## Open Source
 
-Aside from creating react-testing-library (and dom-testing-library) this year,
+Aside from creating React Testing Library (and DOM Testing Library) this year,
 there are a few other accomplishments I had this year/useless numbers in the
 realm of Open Source that I'd like to mention. Here are a few numbers:
 
@@ -257,11 +257,11 @@ million views now).
 I gave a lot of talks this year, you can find all the available recordings on
 [my YouTube playlist](https://youtube.com/playlist?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf).
 I spoke at 7 conferences and several meetups. I was especially proud to deliver
-[my first keynote](https://youtu.be/M9X2qGddHkU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+[my first keynote](https://youtu.be/M9X2qGddHkU?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 at [Chain React](https://infinite.red/ChainReactConf) which was awesome.
 
 I gave
-[a similar talk](https://youtu.be/AiJ8tRRH0f8&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+[a similar talk](https://youtu.be/AiJ8tRRH0f8?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 at [React Rally](https://www.reactrally.com) which is my favorite conference and
 has been a dream of mine since year one.
 
@@ -354,12 +354,3 @@ accomplished. Then make some goals to become even better than you are now.
 > being superior to your former self." ― Ernest Hemingway
 
 I wish you the very best and happiest New Year!
-
----
-
-**Things to not miss**:
-
-- [RRU 043: Testing React Apps Without Testing Implementation Details with Kent C. Dodds](https://devchat.tv/react-round-up/rru-043-testing-react-apps-without-testing-implementation-details-with-kent-c-dodds) -
-  The ReactRoundUp podcast had me on to talk about testing!
-- [Testing Software](https://mhme-blog.now.sh/2018/december/testing-software.html) -
-  Great insights here by [Matt Hamlin](https://mobile.twitter.com/immatthamlin)

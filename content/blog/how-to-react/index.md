@@ -127,6 +127,10 @@ You don't need anything installed to get a really long way! And once you do, you
 can get really far without having to configure any tools. I know of several
 companies shipping their application with create-react-app.
 
+I'll mention also that the beginner course is missing content on React Hooks. If
+you'd like to learn that, then I've got another set of videos that are free on
+egghead.io: [React Hooks Playlist](https://kcd.im/hooks-playlist)
+
 ### Dependencies and npm
 
 Once you've decided that you don't want to write your own version of every
@@ -141,7 +145,7 @@ afternoon. Seriously, do it. There's some really valuable information in there.
 
 In addition, when you start using dependencies, you're going to want to learn
 how to `import` those dependencies. I have a talk called
-["More than you want to know about ES6 Modules"](https://youtu.be/kTlcu16rSLc&index=23&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+["More than you want to know about ES6 Modules"](https://youtu.be/kTlcu16rSLc?index=23&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 which you'll probably find packed with useful information about the ES Modules
 syntax.
 
@@ -188,7 +192,7 @@ conceptually for you. Here's some resources on why:
 - Package management
 - Non-browser styling
 
-[Maintainable CSS in React](https://youtu.be/3-4KsXPO2Q4&index=2&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — [me 👋](https://twitter.com/kentcdodds):
+[Maintainable CSS in React](https://youtu.be/3-4KsXPO2Q4?index=2&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — [me 👋](https://twitter.com/kentcdodds):
 
 - Colocation of concerns
 
@@ -219,11 +223,3 @@ I hope that this gives you (and your friends) a path for how to learn react as
 well as where to start when building React applications. Adding abstractions to
 your application too early makes them less flexible, so I would generally follow
 this pattern when building apps as well. Good luck!
-
-**Things to not miss**:
-
-- [Introducing CodeSandbox Live — real time code collaboration in the browser](https://medium.com/@CompuIves/introducing-codesandbox-live-real-time-code-collaboration-in-the-browser-6d508cfc70c9) — This
-  is SO COOL! and [Ives van Hoorne](https://twitter.com/CompuIves) is very cool
-  too.
-- [React v16.3.0: New lifecycles and context API](https://reactjs.org/blog/2018/03/29/react-v-16-3.html) — HOORAY!
-  Awesome release!
